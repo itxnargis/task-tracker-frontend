@@ -8,9 +8,7 @@ import TaskList from "./components/TaskList";
 import TaskStats from "./components/TaskStats";
 
 const API_URL =
-  window.location.hostname === "localhost"
-    ? "http://localhost:5001/api/tasks"
-    : "https://task-tracker-backend-vlxf.onrender.com/api/tasks";
+  process.env.REACT_APP_API_URL || "http://localhost:5001/api/tasks";
 
 const getInitialTheme = () => {
   try {
